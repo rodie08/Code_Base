@@ -1,0 +1,45 @@
+<template>
+
+
+
+	<div class="slds-m-top_medium slds-m-bottom_x-large">
+		<div class="slds-p-around_medium lgc-bg">
+			<lightning-input type="tel" name="name" label="name" value={mobilevalue} onchange={handleMobileChange}>
+			</lightning-input>
+			<lightning-input type="checkbox" onchange={handleCheckBoxChange} label="Basic option">
+				value={checkBoxFieldValue}
+			</lightning-input>
+			<p>Selected Values are: {checkBoxFieldValue}</p>
+
+			<lightning-combobox name="progress" label="Status" value={value} options={accounts}
+				onchange={handleComboBox1}></lightning-combobox>
+
+			<p>Selected value is: {value}</p>
+
+			<lightning-button variant="brand" label="brand" title="Looks like a link" onclick={handleClick}
+				class="slds-m-left_x-small"></lightning-button>
+			<div style="height: 300px;">
+
+				<lightning-datatable key-field="id" data={contacts} columns={columns} show-row-number-column
+					onrowselection={getSelectedName} enable-infinite-loading>
+				</lightning-datatable>
+				<lightning-card title="ApexImperativeMethod" icon-name="custom:custom63">
+					<div class="slds-m-around_medium">
+						<p class="slds-m-bottom_small">
+							<lightning-button label="Load Contacts" onclick={handleLoad}></lightning-button>
+						</p>
+						<template lwc:if={contacts}>
+							<template for:each={contacts} for:item="contact">
+								<p key={contact.Id}>{contact.name}</p>
+							</template>
+						</template>
+						<template lwc:elseif={error}>
+							<p>{error}</p>
+						</template>
+					</div>
+				</lightning-card>
+
+			</div>
+		</div>
+	</div>
+</template>

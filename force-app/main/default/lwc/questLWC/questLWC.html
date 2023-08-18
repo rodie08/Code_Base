@@ -1,0 +1,16 @@
+<template>
+	<lightning-card variant="Narrow" title="Account:Customer" icon-name="standard:account">
+		<lightning-input type="text" name="input1" label="Account Name" value={namevalue} onchange={accNameHandleChange}></lightning-input>
+		<lightning-input type="tel" name="input1" label="Phone" onchange={phoneNameHandleChange}></lightning-input>
+		<lightning-input type="email" name="input1" label="Email" onchange={emailNameHandleChange}></lightning-input>
+		<lightning-combobox name="progress" label="Active" value={value} placeholder="Select Progress" options={options}
+			onchange={handleChange}></lightning-combobox>
+		<lightning-textarea name="input2" label="Account Activation Summary" value="" onchange={SummaryHandleChange}>
+		</lightning-textarea>
+		<p slot="footer">
+			<lightning-button variant="success" label="Save" title="Account Activation Summary" onclick={btnhandleClick}
+				class="slds-m-right_x-small" ></lightning-button>
+		</p>
+	</lightning-card>
+
+</template>

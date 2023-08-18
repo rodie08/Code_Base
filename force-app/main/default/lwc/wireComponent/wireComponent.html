@@ -1,0 +1,20 @@
+<template>
+	<lightning-card variant="Narrow" title="Hello" icon-name="standard:account">
+		<lightning-button-icon icon-name="utility:down" variant="border-filled" alternative-text="Show More"
+			slot="actions"></lightning-button-icon>
+		<p class="slds-p-horizontal_small">@wire method	</p>
+			<lightning-input type="text" label="Enter a value" onchange={handleInputChange}></lightning-input>
+
+		
+				<ul>
+					<template for:each={sObjectList1} for:item="item">
+						<li key={item.Id}>{item.Name}</li>
+					</template>
+				</ul>
+		
+	
+<p>acacac{sObjectList1}</p>
+		<p slot="footer">Card Footer</p>
+	</lightning-card>
+
+</template>

@@ -1,0 +1,20 @@
+<template>
+
+	<lightning-card variant="Narrow" title="PUBLISH COMPONENT" icon-name="standard:account">
+		<lightning-button-icon icon-name="utility:down" variant="border-filled" alternative-text="Show More"
+			slot="actions"></lightning-button-icon>
+		<p class="slds-p-horizontal_small">
+
+			<lightning-button variant="Brand" label="Add" title="Looks like a link" onclick={addHandleClick}
+				class="slds-m-left_x-small slds-m-left_x-small slds-p-horizontal_small"></lightning-button>
+
+			<lightning-button variant="Brand" label="Substract" title="Looks like a link" onclick={subsHandleClick}
+				class="slds-m-left_x-small slds-p-horizontal_small"></lightning-button>
+
+			<lightning-button variant="Brand" label="Brand" title="Looks like a link" onclick={handleClick}
+				class="slds-m-left_x-small"></lightning-button>
+
+		</p>
+		<p slot="footer">Card Footer</p>
+	</lightning-card>
+</template>

@@ -1,0 +1,13 @@
+<template>
+	<lightning-card title="Child Compoment">
+		<lightning-button label="Clear" slot="actions" onclick={clear}></lightning-button>
+        <lightning-button label=" +  Add" slot="actions" onclick={add}></lightning-button>
+		<lightning-button label="--  Substract" slot="actions" onclick={substract}></lightning-button>
+        <lightning-button label="Send Value to Parent" slot="actions" onclick={sendValueToParent}></lightning-button>
+		<p class="slds-p-horizontal_small">Counter status: {childcounter}</p>
+		
+		<p slot="footer">Card Footer
+			<lightning-button label="Calling Parent" slot="actions" onclick={neew}></lightning-button>
+		</p>
+	</lightning-card>
+</template>

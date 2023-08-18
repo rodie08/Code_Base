@@ -1,0 +1,28 @@
+<template>
+	<!-- Parent to child-->
+	<lightning-card title="Parent Compoment">
+		<div class="slds-p-around_medium lgc-bg">
+
+			<lightning-input type="number" value={countvalue} label="Enter some text" onclick={EmptyInputHandler}
+				onchange={InputHandler}></lightning-input>
+			<br/>
+			<div class="slds-text-align_left slds-text-heading_large">Count ::::: {parentcounter}<br/>
+          Value FromChild::::  {valueFromChild}
+        </div>
+			</div>
+			<lightning-button label="Counter" slot="actions" onclick={CounterHandler}></lightning-button>
+			<lightning-button label="Clear" slot="actions" onclick={ClearHandler}></lightning-button>
+
+			<p slot="footer">Card Footer
+				<lightning-button label="Calling Child" slot="actions" onclick={CallChildHandler}></lightning-button>
+				<lightning-button label="Action on Child component" slot="actions" onclick={CallChildMethodHandler}>
+				</lightning-button>
+
+			</p>
+	</lightning-card>
+	<c-child-child onchildvalue={showChild} childcounter={countvalue} onadd={addHandler} onsubstract={substractHandler}
+		onclear={clearCounterHandler}></c-child-child>
+
+	<!-- -------------------------------------------------------------------- -->
+
+</template>
